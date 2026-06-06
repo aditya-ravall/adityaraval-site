@@ -8,7 +8,7 @@
 
   <title>Aditya Raval | Personal Portfolio</title>
 
-  <link rel="icon" type="image/png" href="favicon.png.jpg">
+  <link rel="icon" type="image/png" href="favicon.png">
 
   <meta
     name="description"
@@ -305,7 +305,39 @@
       margin:auto;
     }
 
-    /* EDUCATION */
+    
+.about-content{
+  display:flex;
+  align-items:center;
+  gap:40px;
+}
+
+.about-photo{
+  width:280px;
+  height:350px;
+  object-fit:cover;
+  border-radius:20px;
+  border:2px solid #00ff99;
+  box-shadow:0 0 25px rgba(0,255,153,0.2);
+}
+
+.about-text{
+  flex:1;
+}
+
+@media(max-width:768px){
+  .about-content{
+    flex-direction:column;
+    text-align:center;
+  }
+
+  .about-photo{
+    width:220px;
+    height:280px;
+  }
+}
+
+/* EDUCATION */
 
     .education-wrapper{
       max-width:550px;
@@ -533,6 +565,16 @@
 
     <div class="about-box">
 
+  <div class="about-content">
+
+    <img
+      src="aditya-raval-photo.jpg"
+      alt="Aditya Raval"
+      class="about-photo"
+    >
+
+    <div class="about-text">
+
       I am a BCA Cyber Security student at Sigma University with a strong interest in ethical hacking, OSINT, networking, and cybersecurity.
 
       <br><br>
@@ -544,6 +586,10 @@
       My goal is to develop strong foundations in both offensive and defensive security while maintaining high ethical standards and a responsible security mindset.
 
     </div>
+
+  </div>
+
+</div>
 
   </section>
 
