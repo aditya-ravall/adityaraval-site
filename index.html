@@ -592,6 +592,15 @@ body {
 #projects { padding: clamp(4.5rem,9vh,7.5rem) 0; }
 
 .proj-wrap { max-width: 560px; }
+.proj-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.4rem;
+  align-items: stretch;
+}
+@media (max-width: 900px) {
+  .proj-grid { grid-template-columns: 1fr; }
+}
 
 .proj-card {
   background: var(--bg-card);
@@ -602,7 +611,11 @@ body {
   overflow: hidden;
   transition: all .3s var(--ease);
   backdrop-filter: blur(10px);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
+.proj-card > .btn-s { margin-top: auto; align-self: flex-start; }
 .proj-card::before {
   content: '';
   position: absolute;
@@ -661,7 +674,7 @@ body {
 
 .certs-grid {
   display: grid;
-  grid-template-columns: repeat(2,1fr);
+  grid-template-columns: repeat(3,1fr);
   gap: 1.4rem;
 }
 
@@ -993,6 +1006,7 @@ footer p {
 ============================== */
 @media (max-width: 1024px) {
   .cap-grid { grid-template-columns: repeat(2,1fr); }
+  .certs-grid { grid-template-columns: repeat(2,1fr); }
 }
 
 @media (max-width: 900px) {
@@ -1281,16 +1295,51 @@ footer p {
       <h2 class="section-title rv d1">Featured Project</h2>
     </div>
 
-    <div class="proj-wrap">
+    <div class="proj-grid">
       <div class="proj-card rv d2">
         <div class="proj-nm">Password Strength Checker</div>
-        <p class="proj-desc">A Python-based password analysis tool that evaluates password strength using entropy calculations, pattern detection, and security heuristics. It helps users identify weak credentials and encourages stronger password security practices.</p>
+        <p class="proj-desc">Developed a Python-based password analysis tool that evaluates password strength using entropy calculations, pattern detection, and security heuristics. Helps users identify weak credentials and improve password security.</p>
         <div class="proj-tags">
           <span class="proj-tag">Python</span>
+          <span class="proj-tag">Cybersecurity</span>
           <span class="proj-tag">Entropy</span>
-          <span class="proj-tag">Heuristics</span>
+          <span class="proj-tag">Security</span>
         </div>
         <a href="https://github.com/aditya-ravall/password-strength-checker" target="_blank" rel="noopener" class="btn-s" style="font-size:.78rem; padding:.58rem 1.2rem;">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/>
+          </svg>
+          View on GitHub
+        </a>
+      </div>
+
+      <div class="proj-card rv d3">
+        <div class="proj-nm">Network Traffic Analyzer</div>
+        <p class="proj-desc">Developed a Python-based Network Traffic Analyzer using Scapy to capture and inspect live network packets. The application monitors network traffic in real time, identifies protocols such as TCP, UDP, and ICMP, and displays source and destination IP addresses for network analysis.</p>
+        <div class="proj-tags">
+          <span class="proj-tag">Python</span>
+          <span class="proj-tag">Scapy</span>
+          <span class="proj-tag">Networking</span>
+          <span class="proj-tag">Packet Analysis</span>
+        </div>
+        <a href="https://github.com/aditya-ravall/network-traffic-analyzer.git" target="_blank" rel="noopener" class="btn-s" style="font-size:.78rem; padding:.58rem 1.2rem;">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/>
+          </svg>
+          View on GitHub
+        </a>
+      </div>
+
+      <div class="proj-card rv d4">
+        <div class="proj-nm">TCP Port Scanner</div>
+        <p class="proj-desc">Built a TCP Port Scanner using Python socket programming to identify open ports on target systems. The application performs port enumeration on common TCP ports and helps identify active network services running on a host.</p>
+        <div class="proj-tags">
+          <span class="proj-tag">Python</span>
+          <span class="proj-tag">Socket Programming</span>
+          <span class="proj-tag">Networking</span>
+          <span class="proj-tag">Port Scanning</span>
+        </div>
+        <a href="https://github.com/aditya-ravall/tcp-port-scanner.git" target="_blank" rel="noopener" class="btn-s" style="font-size:.78rem; padding:.58rem 1.2rem;">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
             <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/>
           </svg>
@@ -1358,6 +1407,30 @@ footer p {
             </div>
           </div>
           <div class="cert-issuer">Deloitte Forage</div>
+        </div>
+      </div>
+
+      <!-- Cert 3 — Commonwealth Bank -->
+      <div class="cert-card rv d4">
+        <div class="cert-img" id="ci3" onclick="openLb(2)">
+          <img src="Commonwealth.png" alt="Introduction to Cybersecurity Job Simulation Certificate">
+          <div class="cert-ov">
+            <div class="cert-ov-ic">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M15 3h6v6M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+              </svg>
+            </div>
+          </div>
+        </div>
+        <div class="cert-body">
+          <div class="cert-top">
+            <div class="cert-title">Introduction to Cybersecurity Job Simulation</div>
+            <div class="cert-badge">
+              <svg width="7" height="7" viewBox="0 0 24 24" fill="currentColor"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              Verified
+            </div>
+          </div>
+          <div class="cert-issuer">Commonwealth Bank • Forage</div>
         </div>
       </div>
 
@@ -1454,7 +1527,7 @@ footer p {
 
 <!-- FOOTER -->
 <footer>
-  <p>Designed & Developed by Aditya Raval • Cybersecurity Student & Web Developer</p>
+  <p>&copy; 2026 Aditya Raval. All Rights Reserved.</p>
 </footer>
 
 <!-- LIGHTBOX -->
@@ -1624,10 +1697,16 @@ hb.addEventListener('click', () => {
 function closeMob() { hb.classList.remove('open'); mm.classList.remove('open'); }
 
 /* ── LIGHTBOX ─────────────────────────────────────────────────────── */
-const certSrcs = ['acmegrade.jpg', 'Deloitte.png'];
+const certSrcs = ['acmegrade.jpg', 'Deloitte.png', 'Commonwealth.png'];
 
 function openLb(idx) {
-  document.getElementById('lb-img').src = certSrcs[idx];
+  const img = document.getElementById('lb-img');
+  img.removeAttribute('onerror');
+  img.src = certSrcs[idx];
+  img.onerror = function () {
+    this.onerror = null;
+    this.alt = 'Certificate image not found: ' + certSrcs[idx];
+  };
   document.getElementById('lb').classList.add('open');
   document.body.style.overflow = 'hidden';
 }
