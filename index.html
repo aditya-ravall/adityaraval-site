@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aditya Raval - Personal Portfolio</title>
+<link rel="icon" type="image/png" href="assets/images/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="nav">
+  <a href="#hero" class="nav-logo">AR<em>.</em></a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#capabilities">Skills</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#certifications">Certs</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <button id="hamburger" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<nav id="mob-menu">
+  <a href="#about"          onclick="closeMob()">About</a>
+  <a href="#capabilities"   onclick="closeMob()">Skills</a>
+  <a href="#projects"       onclick="closeMob()">Projects</a>
+  <a href="#certifications" onclick="closeMob()">Certifications</a>
+  <a href="#contact"        onclick="closeMob()">Contact</a>
+</nav>
+
+<!-- =====================
+     HERO
+===================== -->
+<section id="hero">
+  <canvas id="canvas"></canvas>
+
+  <div class="hero-inner">
+    <div class="hero-over">Cybersecurity Student</div>
+
+    <h1 class="hero-name">
+      Aditya <span class="g">Raval</span>
+    </h1>
+
+    <div class="pills">
+      <span class="pill">Ethical Hacking</span>
+      <span class="pill">OSINT</span>
+      <span class="pill">Networking</span>
+      <span class="pill">Web Development</span>
+    </div>
+
+    <p class="hero-desc">
+      Building practical cybersecurity skills through hands-on learning and real-world projects.
+    </p>
+
+    <div class="hero-social">
+      <a href="https://www.linkedin.com/in/adityaraval-cyber" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+        </svg>
+      </a>
+      <a href="https://github.com/aditya-ravall" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/>
+        </svg>
+      </a>
+    </div>
+
+    <div class="btns">
+      <!-- ↓ Replace resume.pdf with your actual file path -->
+      <a href="assets/resume/Aditya_Raval_Resume.pdf" target="_blank" rel="noopener" class="btn-p">
+        <span>
+          Resume
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+            <polyline points="14 2 14 8 20 8"/>
+            <line x1="9" y1="13" x2="15" y2="13"/>
+            <line x1="9" y1="17" x2="15" y2="17"/>
+          </svg>
+        </span>
+      </a>
+
+      <a href="#contact" class="btn-p">
+        <span>
+          Contact Me
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+            <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
+          </svg>
+        </span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- =====================
+     STATS
+===================== -->
+<section id="stats">
+  <div class="stats-row">
+    <div class="stat rv">
+      <div class="stat-n" data-target="1025" data-sfx="+">0</div>
+      <div class="stat-l">Google Searches</div>
+    </div>
+    <div class="stat rv d1">
+      <div class="stat-n" data-target="725" data-sfx="+">0</div>
+      <div class="stat-l">Cups of Coffee</div>
+    </div>
+    <div class="stat rv d2">
+      <div class="stat-n" data-target="1500" data-sfx="+">0</div>
+      <div class="stat-l">Hours of Learning</div>
+    </div>
+    <div class="stat rv d3">
+      <div class="stat-n" data-target="1000" data-sfx="+">0</div>
+      <div class="stat-l">Learning Sessions</div>
+    </div>
+  </div>
+</section>
+
+<!-- =====================
+     ABOUT
+===================== -->
+<section id="about">
+  <div class="inner">
+    <div class="about-grid">
+
+      <div class="about-photo rv">
+        <div class="photo-frame" id="photoFrame">
+          <!-- ↓ Replace photo.jpg with your actual image -->
+          <img src="assets/images/aditya-photo.jpg" alt="Aditya Raval">
+        </div>
+        <div class="photo-glow"></div>
+      </div>
+
+      <div class="about-text">
+        <div class="eyebrow rv d1">About</div>
+        <h2 class="about-h rv d2">Aspiring Cybersecurity Professional</h2>
+        <div class="about-body">
+          <p class="rv d3">I'm <span class="name-hl">Aditya Raval</span>, a cybersecurity student at Sigma University, Vadodara, with a focused passion for ethical hacking, open-source intelligence, and network security.</p>
+          <p class="rv d4">I approach cybersecurity not as a career path, but as continuous hands-on learning that bridges the gap between academic theory and real-world practice.</p>
+          <div class="principle rv d5">
+            <p>Understand systems deeply enough to break them, and well enough to protect them.</p>
+          </div>
+        </div>
+        <div class="skill-tags rv d6">
+          <span class="tag">Ethical Hacking</span>
+          <span class="tag">OSINT</span>
+          <span class="tag">Networking</span>
+          <span class="tag">Kali Linux</span>
+          <span class="tag">Continuous Learning</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- =====================
+     CAPABILITIES
+===================== -->
+<section id="capabilities">
+  <div class="inner">
+    <div class="sec-hd">
+      <div class="eyebrow rv">Capabilities</div>
+      <h2 class="section-title rv d1">Core Skills</h2>
+    </div>
+
+    <div class="cap-grid">
+
+      <div class="cap rv">
+        <svg class="cap-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+        </svg>
+        <div class="cap-nm">Cybersecurity Fundamentals</div>
+        <div class="cap-ds">CIA triad, threat modeling, defense-in-depth principles.</div>
+      </div>
+
+      <div class="cap rv d1">
+        <svg class="cap-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M2 12h2m18 0h-2M12 2v2m0 16v2M5.6 5.6l1.4 1.4m9.9 9.9 1.4 1.4M5.6 18.4l1.4-1.4M16.9 7l1.4-1.4"/>
+          <circle cx="12" cy="12" r="4"/>
+        </svg>
+        <div class="cap-nm">Ethical Hacking</div>
+        <div class="cap-ds">Penetration testing methodology and vulnerability assessment.</div>
+      </div>
+
+      <div class="cap rv d2">
+        <svg class="cap-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <circle cx="11" cy="11" r="8"/>
+          <path d="m21 21-4.35-4.35M11 8v6M8 11h6"/>
+        </svg>
+        <div class="cap-nm">OSINT</div>
+        <div class="cap-ds">Open-source intelligence gathering and digital footprinting.</div>
+      </div>
+
+      <div class="cap rv d3">
+        <svg class="cap-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <rect x="2" y="2" width="6" height="6" rx="1"/>
+          <rect x="16" y="2" width="6" height="6" rx="1"/>
+          <rect x="9" y="16" width="6" height="6" rx="1"/>
+          <path d="M5 8v4M19 8v4M5 12h14M12 12v4"/>
+        </svg>
+        <div class="cap-nm">Networking</div>
+        <div class="cap-ds">TCP/IP, protocols, topology, and packet analysis.</div>
+      </div>
+
+      <div class="cap rv d4">
+        <svg class="cap-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <rect x="3" y="3" width="18" height="18" rx="2"/>
+          <polyline points="3 9 21 9"/>
+          <path d="m9 14 2 2 4-4"/>
+        </svg>
+        <div class="cap-nm">Kali Linux</div>
+        <div class="cap-ds">Security-focused Linux distro for offensive and defensive tasks.</div>
+      </div>
+
+      <div class="cap rv d5">
+        <svg class="cap-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+        </svg>
+        <div class="cap-nm">Nmap</div>
+        <div class="cap-ds">Network scanning, host discovery, and port enumeration.</div>
+      </div>
+
+      <div class="cap rv d6">
+        <svg class="cap-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+          <polyline points="14 2 14 8 20 8"/>
+          <path d="M10 13l-1 4 1 1 1-1-1-4zM14 13l1 4-1 1-1-1 1-4z"/>
+        </svg>
+        <div class="cap-nm">Python</div>
+        <div class="cap-ds">Scripting, automation, and security tooling development.</div>
+      </div>
+
+      <div class="cap rv d7">
+        <svg class="cap-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <polyline points="16 18 22 12 16 6"/>
+          <polyline points="8 6 2 12 8 18"/>
+        </svg>
+        <div class="cap-nm">HTML / CSS</div>
+        <div class="cap-ds">Web structure and styling for security-aware web development.</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- =====================
+     PROJECTS
+===================== -->
+<section id="projects">
+  <div class="inner">
+    <div class="sec-hd">
+      <div class="eyebrow rv">Projects</div>
+      <h2 class="section-title rv d1">Featured Project</h2>
+    </div>
+
+    <div class="proj-grid">
+      <div class="proj-card rv d2">
+        <div class="proj-nm">Password Strength Checker</div>
+        <p class="proj-desc">Developed a Python-based password analysis tool that evaluates password strength using entropy calculations, pattern detection, and security heuristics. Helps users identify weak credentials and improve password security.</p>
+        <div class="proj-tags">
+          <span class="proj-tag">Python</span>
+          <span class="proj-tag">Cybersecurity</span>
+          <span class="proj-tag">Entropy</span>
+          <span class="proj-tag">Security</span>
+        </div>
+        <a href="https://github.com/aditya-ravall/password-strength-checker" target="_blank" rel="noopener" class="btn-s" style="font-size:.78rem; padding:.58rem 1.2rem;">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/>
+          </svg>
+          View on GitHub
+        </a>
+      </div>
+
+      <div class="proj-card rv d3">
+        <div class="proj-nm">Network Traffic Analyzer</div>
+        <p class="proj-desc">Developed a Python-based Network Traffic Analyzer using Scapy to capture and inspect live network packets. The application monitors network traffic in real time, identifies protocols such as TCP, UDP, and ICMP, and displays source and destination IP addresses for network analysis.</p>
+        <div class="proj-tags">
+          <span class="proj-tag">Python</span>
+          <span class="proj-tag">Scapy</span>
+          <span class="proj-tag">Networking</span>
+          <span class="proj-tag">Packet Analysis</span>
+        </div>
+        <a href="https://github.com/aditya-ravall/network-traffic-analyzer.git" target="_blank" rel="noopener" class="btn-s" style="font-size:.78rem; padding:.58rem 1.2rem;">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/>
+          </svg>
+          View on GitHub
+        </a>
+      </div>
+
+      <div class="proj-card rv d4">
+        <div class="proj-nm">TCP Port Scanner</div>
+        <p class="proj-desc">Built a TCP Port Scanner using Python socket programming to identify open ports on target systems. The application performs port enumeration on common TCP ports and helps identify active network services running on a host.</p>
+        <div class="proj-tags">
+          <span class="proj-tag">Python</span>
+          <span class="proj-tag">Socket Programming</span>
+          <span class="proj-tag">Networking</span>
+          <span class="proj-tag">Port Scanning</span>
+        </div>
+        <a href="https://github.com/aditya-ravall/tcp-port-scanner.git" target="_blank" rel="noopener" class="btn-s" style="font-size:.78rem; padding:.58rem 1.2rem;">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/>
+          </svg>
+          View on GitHub
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =====================
+     CERTIFICATIONS
+===================== -->
+<section id="certifications">
+  <div class="inner">
+    <div class="sec-hd">
+      <div class="eyebrow rv">Credentials</div>
+      <h2 class="section-title rv d1">Certifications</h2>
+    </div>
+
+    <div class="certs-grid">
+
+      <!-- Cert 1 — Acmegrade -->
+      <div class="cert-card rv d2">
+        <div class="cert-img" id="ci1" onclick="openLb(0)">
+          <img src="assets/certifications/acmegrade.jpg" alt="Cybersecurity Fundamentals Certificate">
+          <div class="cert-ov">
+            <div class="cert-ov-ic">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M15 3h6v6M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+              </svg>
+            </div>
+          </div>
+        </div>
+        <div class="cert-body">
+          <div class="cert-top">
+            <div class="cert-title">Cybersecurity Fundamentals</div>
+            <div class="cert-badge">
+              <svg width="7" height="7" viewBox="0 0 24 24" fill="currentColor"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              Verified
+            </div>
+          </div>
+          <div class="cert-issuer">Acmegrade Technologies</div>
+        </div>
+      </div>
+
+      <!-- Cert 2 — Deloitte -->
+      <div class="cert-card rv d3">
+        <div class="cert-img" id="ci2" onclick="openLb(1)">
+          <img src="assets/certifications/Deloitte.png" alt="Deloitte Cybersecurity Job Simulation Certificate">
+          <div class="cert-ov">
+            <div class="cert-ov-ic">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M15 3h6v6M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+              </svg>
+            </div>
+          </div>
+        </div>
+        <div class="cert-body">
+          <div class="cert-top">
+            <div class="cert-title">Deloitte Cybersecurity Job Simulation</div>
+            <div class="cert-badge">
+              <svg width="7" height="7" viewBox="0 0 24 24" fill="currentColor"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              Verified
+            </div>
+          </div>
+          <div class="cert-issuer">Deloitte Forage</div>
+        </div>
+      </div>
+
+      <!-- Cert 3 — Commonwealth Bank -->
+      <div class="cert-card rv d4">
+        <div class="cert-img" id="ci3" onclick="openLb(2)">
+          <img src="assets/certifications/Commonwealth.png" alt="Introduction to Cybersecurity Job Simulation Certificate">
+          <div class="cert-ov">
+            <div class="cert-ov-ic">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M15 3h6v6M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+              </svg>
+            </div>
+          </div>
+        </div>
+        <div class="cert-body">
+          <div class="cert-top">
+            <div class="cert-title">Introduction to Cybersecurity Job Simulation</div>
+            <div class="cert-badge">
+              <svg width="7" height="7" viewBox="0 0 24 24" fill="currentColor"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              Verified
+            </div>
+          </div>
+          <div class="cert-issuer">Commonwealth Bank • Forage</div>
+        </div>
+      </div>
+
+      <!-- Cert 4 — LinkedIn Learning: AI for Cybersecurity -->
+      <div class="cert-card rv d5">
+        <div class="cert-img" id="ci4" onclick="openLb(3)">
+          <img src="assets/certifications/Ai-Cybersecurity.jpg" alt="Artificial Intelligence for Cybersecurity Certificate">
+          <div class="cert-ov">
+            <div class="cert-ov-ic">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M15 3h6v6M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+              </svg>
+            </div>
+          </div>
+        </div>
+        <div class="cert-body">
+          <div class="cert-top">
+            <div class="cert-title">Artificial Intelligence for Cybersecurity</div>
+            <div class="cert-badge">
+              <svg width="7" height="7" viewBox="0 0 24 24" fill="currentColor"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              Verified
+            </div>
+          </div>
+          <div class="cert-issuer">LinkedIn Learning</div>
+        </div>
+      </div>
+
+      <!-- Cert 5 — LinkedIn Learning: Cybersecurity Foundations -->
+      <div class="cert-card rv d6">
+        <div class="cert-img" id="ci5" onclick="openLb(4)">
+          <img src="assets/certifications/Cybersecurity.png" alt="Cybersecurity Foundations Certificate">
+          <div class="cert-ov">
+            <div class="cert-ov-ic">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M15 3h6v6M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+              </svg>
+            </div>
+          </div>
+        </div>
+        <div class="cert-body">
+          <div class="cert-top">
+            <div class="cert-title">Cybersecurity Foundations</div>
+            <div class="cert-badge">
+              <svg width="7" height="7" viewBox="0 0 24 24" fill="currentColor"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              Verified
+            </div>
+          </div>
+          <div class="cert-issuer">LinkedIn Learning</div>
+        </div>
+      </div>
+
+      <!-- Cert 6 — Mastercard Cybersecurity Job Simulation -->
+      <div class="cert-card rv d7">
+        <div class="cert-img" id="ci6" onclick="openLb(5)">
+          <img src="assets/certifications/Mastercard.png" alt="Mastercard Cybersecurity Job Simulation Certificate">
+          <div class="cert-ov">
+            <div class="cert-ov-ic">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M15 3h6v6M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+              </svg>
+            </div>
+          </div>
+        </div>
+        <div class="cert-body">
+          <div class="cert-top">
+            <div class="cert-title">Cybersecurity Job Simulation</div>
+            <div class="cert-badge">
+              <svg width="7" height="7" viewBox="0 0 24 24" fill="currentColor"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              Verified
+            </div>
+          </div>
+          <div class="cert-issuer">Mastercard • Forage</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- =====================
+     CONTACT
+===================== -->
+<section id="contact">
+  <div class="inner">
+    <div class="contact-card rv">
+      <div class="eyebrow" style="margin-bottom:.85rem;">Get in Touch</div>
+      <h2 class="contact-h">Let's talk security, projects, or opportunities.</h2>
+
+      <div class="clist">
+
+        <a href="mailto:adityaraval.cyber@gmail.com" class="ci">
+          <div class="ci-ico">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <rect x="2" y="4" width="20" height="16" rx="2"/>
+              <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+            </svg>
+          </div>
+          <div>
+            <span class="ci-lbl">Email</span>
+            <span class="ci-val">adityaraval.cyber@gmail.com</span>
+          </div>
+        </a>
+
+        <a href="https://github.com/aditya-ravall" target="_blank" rel="noopener" class="ci">
+          <div class="ci-ico">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/>
+            </svg>
+          </div>
+          <div>
+            <span class="ci-lbl">GitHub</span>
+            <span class="ci-val">github.com/aditya-ravall</span>
+          </div>
+        </a>
+
+        <a href="https://www.linkedin.com/in/adityaraval-cyber" target="_blank" rel="noopener" class="ci">
+          <div class="ci-ico">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+            </svg>
+          </div>
+          <div>
+            <span class="ci-lbl">LinkedIn</span>
+            <span class="ci-val">linkedin.com/in/adityaraval-cyber</span>
+          </div>
+        </a>
+
+        <div class="ci" style="cursor:default;">
+          <div class="ci-ico">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/>
+              <circle cx="12" cy="10" r="3"/>
+            </svg>
+          </div>
+          <div>
+            <span class="ci-lbl">Location</span>
+            <span class="ci-val">Vadodara, Gujarat, India</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =====================
+     SEND MESSAGE
+===================== -->
+<section id="send-message">
+  <div class="inner">
+    <div class="sm-card rv">
+      <h2 class="sm-h">Send Message</h2>
+      <p class="sm-p">Have a question, collaboration idea, project inquiry, or opportunity? Send me an email directly.</p>
+      <a href="mailto:adityaraval.cyber@gmail.com" class="btn-p">
+        <span>
+          Send Message
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+            <path d="M22 2 11 13"/>
+            <path d="M22 2 15 22l-4-9-9-4 20-7z"/>
+          </svg>
+        </span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>&copy; 2026 Aditya Raval. All Rights Reserved.</p>
+</footer>
+
+<!-- LIGHTBOX -->
+<div id="lb">
+  <button id="lb-close" onclick="closeLb()" aria-label="Close">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+      <line x1="18" y1="6" x2="6" y2="18"/>
+      <line x1="6" y1="6" x2="18" y2="18"/>
+    </svg>
+  </button>
+  <img id="lb-img" src="" alt="Certificate preview">
+</div>
+
+<!-- =====================================================================
+     SCRIPTS
+===================================================================== -->
+<script src="js/particles.js"></script>
+<script src="js/animations.js"></script>
+<script src="js/navigation.js"></script>
+<script src="js/certifications.js"></script>
+<script src="js/main.js"></script>
+
+</body>
+</html>
